@@ -1,0 +1,263 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    font-family: 'Syne', sans-serif;
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.logo{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menuTypes{
+    flex: 1;
+    text-align: center;
+    padding-top: 20px;
+}
+.menuTypes ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 24px;
+    position: relative;
+}
+
+.menuTypes ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.menuTypes ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F092CF;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.menuTypes li a:hover::after{
+    width: 100%;
+}
+
+.nav-links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F092CF;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+    .textbox{
+        width: 90%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
+
+    .textbox h1{
+        font-weight: 800;
+        font-size: 50px;
+    }
+
+    .textbox p{
+        font-weight: 600;
+        font-size: 25px;
+        margin: 10px 0 40px
+
+    }
+
+    .book-btn{
+        display: inline-block;
+        text-decoration: none;
+        color:white;
+        border: 1px solid black;
+        padding: 12px 34px;
+        font-size: 15px;
+        font-weight: 600;
+        background: black;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .book-btn:hover{
+        border: 1 px solid #F092CF;
+        background: #F092CF;
+        transition: 1s;
+    }
+
+    .backdrop{
+        min-height: 100vh;
+        width: 100%;
+        background-image: url(images/polish.jpeg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+    }
+
+    nav .fa{
+        display: none;
+    }
+
+    @media (max-width:700px){
+    
+        .textbox h1{
+            font-size: 30px;
+        }
+        .textbox p{
+            font-size: 20px;
+        }
+
+        .nav-links ul li{
+            display: block;
+        }
+
+        .nav-links{
+            display: none;
+            /* Had a bug so set display to none for now, hamburger still shows*/
+            position: absolute;
+            background-color: #F092CF;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right:-200;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+        
+        }
+
+        nav .fa{
+            display: block;
+            color: black;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .nav-links ul{
+            padding: 30px;
+        }
+       
+    }
+
+    .menu{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .menu h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .row{
+        margin: 5%;
+        display: flex;
+        text-align: left;
+        justify-content: space-evenly;
+    }
+
+    .row h3{
+        font-size: 25px;
+    }
+
+    .col{
+        flex-basis: 31%;
+        border-radius: 20px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+    }
+
+
+    .info-row{
+        margin: 5%;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .info h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .info-row h2{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .address-col{
+        flex-basis: 31%;
+        border-radius: 20px;
+        margin-bottom: 5%;
+        padding-top: 20px;
+        padding: 20px 12px;
+        box-sizing: border-box;
+    }
+
+
+    @media(max-width: 700px){
+        .row{
+            flex-direction: column;
+        }
+        .info-row{
+            flex-direction: column;
+        }
+    }
+
+    .item{
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .price h4{
+        font-weight: 400;
+    }
